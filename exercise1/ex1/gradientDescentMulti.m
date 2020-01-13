@@ -10,4 +10,5 @@ function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters
         theta = theta - alpha * (1 / m * X' * (X * theta - y));
         J_history(i) = computeCostMulti(X, y, theta);
     end
+    
 end

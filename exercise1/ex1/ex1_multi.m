@@ -1,5 +1,5 @@
-%% Machine Learning Online Class
-%  Exercise 1: Linear regression with multiple variables
+%% Machine Learning Online Class Exercise 1, Part 2
+%  Linear regression with multiple variables
 
 %% Initialization
 
@@ -63,7 +63,7 @@ price = pred * theta;
 % ============================================================
 
 fprintf(['Predicted price of a 1650 sq-ft, 3 br house ' ...
-    '(using gradient descent):\n $%f\n'], price);
+         '(using gradient descent):\n $%f\n'], price);
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
@@ -89,10 +89,8 @@ fprintf('Theta computed from the normal equations: \n');
 fprintf(' %f \n', theta);
 fprintf('\n');
 
-
 % Estimate the price of a 1650 sq-ft, 3 br house
 price = [1 1650 3] * theta;
 
 fprintf(['Predicted price of a 1650 sq-ft, 3 br house ' ...
-    '(using normal equations):\n $%f\n'], price);
-
+         '(using normal equations):\n $%f\n'], price);

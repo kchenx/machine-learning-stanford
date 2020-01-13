@@ -4,4 +4,5 @@ function [theta] = normalEqn(X, y)
     %   regression using the normal equations.
     
     theta = pinv(X' * X) * X' * y; 
+    
 end

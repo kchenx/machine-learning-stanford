@@ -14,4 +14,5 @@ function [X_norm, mu, sigma] = featureNormalize(X)
         sigma(j) = std(X(:,j));    
         X_norm(:,j) = (X(:,j) - mu(j)) ./ sigma(j);
     end
+    
 end

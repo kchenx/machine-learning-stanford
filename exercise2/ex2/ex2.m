@@ -1,20 +1,5 @@
-%% Machine Learning Online Class - Exercise 2: Logistic Regression
-%
-%  Instructions
-%  ------------
-% 
-%  This file contains code that helps you get started on the logistic
-%  regression exercise. You will need to complete the following functions 
-%  in this exericse:
-%
-%     sigmoid.m
-%     costFunction.m
-%     predict.m
-%     costFunctionReg.m
-%
-%  For this exercise, you will not need to change any code in this file,
-%  or any other files other than those mentioned above.
-%
+%% Machine Learning Online Class - Exercise 2, Part 1
+%  Logistic Regression
 
 %% Initialization
 clear ; close all; clc
@@ -47,7 +32,6 @@ hold off;
 
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
-
 
 %% ============ Part 2: Compute Cost and Gradient ============
 %  In this part of the exercise, you will implement the cost and gradient
@@ -85,7 +69,6 @@ fprintf('Expected gradients (approx):\n 0.043\n 2.566\n 2.647\n');
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
 
-
 %% ============= Part 3: Optimizing using fminunc  =============
 %  In this exercise, you will use a built-in function (fminunc) to find the
 %  optimal parameters theta.
@@ -95,8 +78,7 @@ options = optimset('GradObj', 'on', 'MaxIter', 400);
 
 %  Run fminunc to obtain the optimal theta
 %  This function will return theta and the cost 
-[theta, cost] = ...
-	fminunc(@(t)(costFunction(t, X, y)), initial_theta, options);
+[theta, cost] = fminunc(@(t)(costFunction(t, X, y)), initial_theta, options);
 
 % Print theta to screen
 fprintf('Cost at theta found by fminunc: %f\n', cost);
@@ -130,8 +112,6 @@ pause;
 %
 %  Furthermore, you will compute the training and test set accuracies of 
 %  our model.
-%
-%  Your task is to complete the code in predict.m
 
 %  Predict probability for a student with score 45 on exam 1 
 %  and score 85 on exam 2 
@@ -147,5 +127,3 @@ p = predict(theta, X);
 fprintf('Train Accuracy: %f\n', mean(double(p == y)) * 100);
 fprintf('Expected accuracy (approx): 89.0\n');
 fprintf('\n');
-
-
