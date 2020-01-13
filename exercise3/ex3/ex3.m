@@ -1,4 +1,5 @@
 %% Machine Learning Online Class - Exercise 3 | Part 1: One-vs-all
+%  Multi-class logistic regression
 
 %% Initialization
 clear ; close all; clc
@@ -11,7 +12,6 @@ num_labels = 10;          % 10 labels, from 1 to 10
 %% =========== Part 1: Loading and Visualizing Data =============
 %  We start the exercise by first loading and visualizing the dataset.
 %  You will be working with a dataset that contains handwritten digits.
-%
 
 % Load Training Data
 fprintf('Loading and Visualizing Data ...\n')
@@ -34,7 +34,6 @@ pause;
 %  regularized logistic regression implementation is vectorized. After
 %  that, you will implement one-vs-all classification for the handwritten
 %  digit dataset.
-%
 
 % Test case for lrCostFunction
 fprintf('\nTesting lrCostFunction() with regularization');
@@ -54,6 +53,7 @@ fprintf(' 0.146561\n -0.548558\n 0.724722\n 1.398003\n');
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
+
 %% ============ Part 2b: One-vs-All Training ============
 fprintf('\nTraining One-vs-All Logistic Regression...\n')
 
@@ -63,10 +63,8 @@ lambda = 0.1;
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
-
 %% ================ Part 3: Predict for One-Vs-All ================
 
 pred = predictOneVsAll(all_theta, X);
 
 fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);
-
