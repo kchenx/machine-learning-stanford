@@ -1,20 +1,5 @@
 %% Machine Learning Online Class - Exercise 4 Neural Network Learning
 
-%  Instructions
-%  ------------
-% 
-%  This file contains code that helps you get started on the
-%  linear exercise. You will need to complete the following functions 
-%  in this exericse:
-%
-%     sigmoidGradient.m
-%     randInitializeWeights.m
-%     nnCostFunction.m
-%
-%  For this exercise, you will not need to change any code in this file,
-%  or any other files other than those mentioned above.
-%
-
 %% Initialization
 clear ; close all; clc
 
@@ -43,7 +28,6 @@ displayData(X(sel, :));
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
-
 
 %% ================ Part 2: Loading Parameters ================
 % In this part of the exercise, we load some pre-initialized 
@@ -101,7 +85,6 @@ fprintf(['Cost at parameters (loaded from ex4weights): %f '...
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
-
 
 %% ================ Part 5: Sigmoid Gradient  ================
 %  Before you start implementing the neural network, you will first
@@ -183,7 +166,7 @@ fprintf('\nTraining Neural Network... \n')
 
 %  After you have completed the assignment, change the MaxIter to a larger
 %  value to see how more training helps.
-options = optimset('MaxIter', 50);
+options = optimset('MaxIter', 400);
 
 %  You should also try different values of lambda
 lambda = 1;
@@ -208,7 +191,6 @@ Theta2 = reshape(nn_params((1 + (hidden_layer_size * (input_layer_size + 1))):en
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
-
 %% ================= Part 9: Visualize Weights =================
 %  You can now "visualize" what the neural network is learning by 
 %  displaying the hidden units to see what features they are capturing in 
@@ -230,5 +212,3 @@ pause;
 pred = predict(Theta1, Theta2, X);
 
 fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);
-
-
