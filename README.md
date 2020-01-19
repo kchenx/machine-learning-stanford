@@ -8,4 +8,4 @@ Topics include (in order):
 1. Linear regression (gradient descent)
 2. Logistic regression with regularization
 3. Multi-class classification
-4. Neural network learning with regularization (feedforward and backpropagation)
+4. Neural network learning with regularization (backpropagation)
