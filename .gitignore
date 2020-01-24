@@ -1,4 +1,7 @@
+# Submission
 lib/
-.DS_Store
-token.mat
 submit.m
+token.mat
+
+# Mac
+.DS_Store
