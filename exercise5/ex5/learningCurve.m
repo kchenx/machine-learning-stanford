@@ -21,6 +21,10 @@ function [error_train, error_val] = ...
     error_train = zeros(m, 1);
     error_val   = zeros(m, 1);
     
+    for i = 1:m
+        
+    end
+    
     % ====================== YOUR CODE HERE ======================
     % Instructions: Fill in this function to return training errors in
     %               error_train and the cross validation errors in error_val.

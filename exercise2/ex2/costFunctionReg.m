@@ -5,9 +5,11 @@ function [J, grad] = costFunctionReg(theta, X, y, lambda)
     %   gradient of the cost w.r.t. to the parameters.
     
     m = length(y); % number of training examples
+    
     J = 1 / m * (-y' * log(sigmoid(X * theta)) ...
         - (1 - y)' * log(1 - sigmoid(X * theta))) ...
         + lambda / (2 * m) * theta(2:end)' * theta(2:end);
+    
     grad = 1 / m * X' * (sigmoid(X * theta) - y) + lambda / m * theta;
     grad(1) = 1 / m * X(:,1)' * (sigmoid(X * theta) - y);
     
