@@ -7,12 +7,10 @@ function [C, sigma] = dataset3Params(X, y, Xval, yval)
     %   sigma based on a cross-validation set.
     %
 
-    C = 0;
-    sigma = 0;
-    minerror = 1;
-    
-    % find min error among 64 options for C-sigma pairs
     vars = [0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30];
+
+    % find min error among length(vars)^2 options for C-sigma pairs
+    minerror = inf;
     for Ci = vars
         for sigmaj = vars
             model = svmTrain(X, y, Ci, @(x1, x2) gaussianKernel(x1, x2, sigmaj));
