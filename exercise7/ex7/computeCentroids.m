@@ -13,8 +13,7 @@ function centroids = computeCentroids(X, idx, K)
     n = size(X, 2);
     centroids = zeros(K, n);
     for k = 1:K
-        inds = find(idx == k);
-        centroids(k, :) = mean(X(inds, :));
+        centroids(k, :) = mean(X(idx == k, :));
     end
 
 end
