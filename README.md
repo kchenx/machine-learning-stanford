@@ -11,3 +11,5 @@ Topics include (in order):
 4. Neural network learning with regularization (backpropagation)
 5. Linear and polynomial regression with regularization
 6. Support vector machines
+7. *k*-means clustering and principal component analysis
+8. Anomaly detection and recommender systems
