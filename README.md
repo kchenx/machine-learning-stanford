@@ -9,3 +9,5 @@ Topics include (in order):
 2. Logistic regression with regularization
 3. Multi-class classification
 4. Neural network learning with regularization (backpropagation)
+5. Linear and polynomial regression with regularization
+6. Support vector machines
