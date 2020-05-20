@@ -13,10 +13,8 @@ function [C, sigma] = dataset3Params(X, y, Xval, yval)
     
     % find min error among 64 options for C-sigma pairs
     vars = [0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30];
-    for i = 1:length(vars)
-        for j = 1:length(vars)
-            Ci = vars(i);
-            sigmaj = vars(j);
+    for Ci = vars
+        for sigmaj = vars
             model = svmTrain(X, y, Ci, @(x1, x2) gaussianKernel(x1, x2, sigmaj));
             predictions = svmPredict(model, Xval);
             error = mean(double(predictions ~= yval));
